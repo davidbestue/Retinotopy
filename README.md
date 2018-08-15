@@ -219,8 +219,10 @@ Select 3 points to define the cutting plane: 2 on medial side and 1 on lateral s
 Choose a 4th point to specify which portion of surface to keep and press button “Cut plane”.
 ![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/3_4.png)
 
+<br/>
 
 Once it is cut
+
 <br/>
 ![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/cut.png)
 
@@ -246,6 +248,27 @@ then File > Patch > Load Patch …
 
 
 **Repeat the steps for the right hemisphere.**
+
+Now you can run the field sign
+
+```
+fieldsign-sess -a retinotopy.lh -patch lh.occip.patch.flat -s David
+fieldsign-sess -a retinotopy.rh -patch rh.occip.patch.flat -s David
+```
+
+**Visualize the results**
+
++ **Display field sign:*
+<br/>
+
+```
+tksurfer-sess -a retinotopy.lh -s David -fieldsign -tksurfer
+```
+<br/>
+
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/fsign.png)
+
+
 
 
 **Now you need to create a mask over the regions of interest**
