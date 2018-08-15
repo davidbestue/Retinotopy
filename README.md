@@ -191,7 +191,7 @@ tksurfer-sess -a retinotopy.lh -s David -map angle.masked -tksurfer
 <br/>
 
 
-# Field sign
+# Field sign map
 
 [Follow this link to create an occipital patch](http://www.alivelearn.net/?p=65) 
 What follows is the adapted code in my case and some "corrections"
@@ -211,6 +211,18 @@ Then select points along calcarine fissure and press button “Cut line”.
 
 ![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/cut_calcarine_fissure.png)
 
+Select 3 points to define the cutting plane: 2 on medial side and 1 on lateral side. 
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/1_2.png)
+
+Choose a 4th point to specify which portion of surface to keep and press button “Cut plane”.
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/3_4.png)
+
+Once it is cut
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/cut.png)
+
+
+Save (File > Patch > Save As) as file lh.occip.patch.3d.
+(To know how to cut full brain, check out the **fs_hands-on.pdf**, slides 36 and 37 )
 
 
 
