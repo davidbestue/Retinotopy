@@ -196,6 +196,8 @@ tksurfer-sess -a retinotopy.lh -s David -map angle.masked -tksurfer
 [Follow this link to create an occipital patch](http://www.alivelearn.net/?p=65) 
 What follows is the adapted code in my case and some "corrections"
 
+An [alternative](https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferOccipitalFlattenedPatch) for the same process. 
+
 Cut occiput surface
 Display the inflated left hemisphere.
 
@@ -217,13 +219,33 @@ Select 3 points to define the cutting plane: 2 on medial side and 1 on lateral s
 Choose a 4th point to specify which portion of surface to keep and press button “Cut plane”.
 ![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/3_4.png)
 
+
 Once it is cut
+<br/>
 ![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/cut.png)
 
-
+<br/>
 Save (File > Patch > Save As) as file lh.occip.patch.3d.
 (To know how to cut full brain, check out the **fs_hands-on.pdf**, slides 36 and 37 )
 
+<br/>
+**Now you need to flatten this occipital patch**
+
+cd to the subject’s “surf” directory and run
+
+```
+mris_flatten -w 0 -distances 20 7 lh.occip.patch.3d  lh.occip.patch.flat
+```
+Flattening takes 1-2 hours.
+
+To visualize the patch, you can first load the subject’s inflated surface ('tksurfer David lh inflated')
+then File > Patch > Load Patch …
+(You also need to load the curvature on top)
+
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/occipital_patch_flat.png)
+
+
+**Repeat the steps for the right hemisphere.**
 
 
 **Now you need to create a mask over the regions of interest**
