@@ -176,7 +176,7 @@ tksurfer-sess -a retinotopy.lh -s David -map angle.masked -tksurfer
 <br/>
 
 
-**Now you need to create a mask over the regions of interest*
+**Now you need to create a mask over the regions of interest**
 
 # Make a mask
 <br/>
