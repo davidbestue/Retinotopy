@@ -66,6 +66,8 @@ cd $SUBJECTS_DIR
 
 **Before starting with the retinotopy you have to be carefull about the structure of the directories**
 
+[Info about directories and freesurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/FsFastTutorialV5.1/FsFastDirStruct)
+
 In this structure it is not important if the data was adquired in different sessions. All the run that you want
 to include go inside the **bold** folder
 
@@ -87,6 +89,16 @@ retinotopy
  ```
  
 The name of run folders has to be 3-digit with padding 0s. Something like “01″ or “1″ won’t work. Under run folders, put the functional imaging data “f.nii” and paradigm file (rtopy.par) 
+
+The functional data has to be in .nii format. If the data that you get is in .dcm you can convert it to a 4D .nii format by using the matlab tool [dcm2nii](https://www.mathworks.com/matlabcentral/fileexchange/42997-xiangruili-dicm2nii)
+After transformig the functional .dcm to .nii I moved it to the local
+
+```
+Example:
+
+scp -r davsan@akalla.cns.ki.se:~/Desktop/Distractor_project/imaging/David/Att_map_tilted/run1/fmri_1_RetinoOpt_IPS_Tilt.nii /home/david/Desktop/freesurfer/retinotopy/David/bold/001/f.nii 
+
+```
 
 <br/>
 
@@ -119,6 +131,8 @@ preproc-sess -s David -fwhm 5 -fsd bold -per-run
 
 # Make the analysis
 
+[More details about 1st level analysis in freesurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/FsFastTutorialV5.1/FsFastFirstLevel)
+
 <br/>
 Here you will specify the retinotopy parameters for the analysis
 **You will run one analysis for each hemisphere**
@@ -150,6 +164,7 @@ selxavg3-sess -analysis retinotopy.rh -s David
 <br/>
 <br/>
 
+
 # Visualize the results
 
 + **Significance maps:**
@@ -176,16 +191,34 @@ tksurfer-sess -a retinotopy.lh -s David -map angle.masked -tksurfer
 <br/>
 
 
+# Field sign
+
+[Follow this link to create an occipital patch](http://www.alivelearn.net/?p=65) 
+What follows is the adapted code in my case and some "corrections"
+
+Cut occiput surface
+Display the inflated left hemisphere.
+
+```
+tksurfer David lh inflated
+```
+Load curvature:
+"File --> Curvature --> Load curvature"
+"/home/david/Desktop/freesurfer/David/structurals/struct_1/David/surf/lh.curv"
+
+Rotate the brain until the medial surface is facing you.
+Then select points along calcarine fissure and press button “Cut line”.
+
+
+
+
+
 **Now you need to create a mask over the regions of interest**
 
 # Make a mask
 <br/>
 
 Follow the pdf attached **instructions_creating_mask.pdf**
-
-
-
-
 
 
 
