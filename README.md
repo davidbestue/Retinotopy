@@ -258,7 +258,7 @@ fieldsign-sess -a retinotopy.rh -patch rh.occip.patch.flat -s David
 
 **Visualize the results**
 
-+ **Display field sign:*
++ **Display field sign:**
 <br/>
 
 ```
