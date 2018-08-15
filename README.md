@@ -209,6 +209,7 @@ Load curvature:
 Rotate the brain until the medial surface is facing you.
 Then select points along calcarine fissure and press button “Cut line”.
 
+[!](https://github.com/davidbestue/Retinotopy/blob/master/imgs/cut_calcarine_fissure.png)
 
 
 
