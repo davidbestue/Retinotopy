@@ -280,6 +280,11 @@ Follow the pdf attached **instructions_creating_mask.pdf**
 
 
 
+´´´
+mri_vol2roi --label /home/david/Desktop/freesurfer/David/structurals/struct_1/David/label/IPS_1lh.label --srcvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/template.nii.gz --srcreg /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/register.dof6.dat~ --finalmskvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/maskIPS_1lh_2 --roiavg IPS_1lh.delete.dat
+
+
+´´´
 
 
 
