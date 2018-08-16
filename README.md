@@ -346,20 +346,28 @@ tksurfer-sess -a retinotopy.rh -s David -map angle -tksurfer
 Once you have the image you will mark the region of interest
 
 **1. Press the “Make Closed Path” button.**
+<br/>
 **2. Mark with the cursor points defining the area you want to delimitate.**
+<br/>
 **3. Press the “Make Closed Path” button.** 
+<br/>
 **4. Click with the cursor on a point inside the area.**
+<br/>
 **5. Click on “Custom Fill”.**
+ <br/>
  Then select on:
     “Fill conditions” - “Up to and including paths”;
     “Fill From” - “Last clicked vertex”
     “Action” - Create new label
     press “Fill”
- 
-**5. press File > Label > Save Selected Label**
+
+<br/>
+**6. press File > Label > Save Selected Label**
+<br/>
     Iput a name, for example “v1rh.label” and click ok.
 
 
+<br/>
 **Now you need to adapt the mask to the voxel size of the functional image**
 
 We use the [mri_vol2roi](https://surfer.nmr.mgh.harvard.edu/fswiki/mri_vol2roi) function
