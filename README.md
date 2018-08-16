@@ -364,16 +364,13 @@ Then select on:
 "Action” - Create new label
 <br/>
 press “Fill”
-
 <br/>
 
 **6. press File > Label > Save Selected Label**
-
 <br/>
     Iput a name, for example “v1rh.label” and click ok.
 
 <br/>
-
 **Now you need to adapt the mask to the voxel size of the functional image**
 
 We use the [mri_vol2roi](https://surfer.nmr.mgh.harvard.edu/fswiki/mri_vol2roi) function
@@ -381,9 +378,13 @@ We use the [mri_vol2roi](https://surfer.nmr.mgh.harvard.edu/fswiki/mri_vol2roi) 
 mri_vol2roi --label ***path***  --scrvol ***path*** --srcreg ***path*** --finalmskvol ***path*** --roiavg ***X.delet.dat***
 
 --label : path to label file
+<br/>
 --scrvol : Bfloat/bshort stem of the volume from which the ROI is to be extracted.
+<br/>
 --srcreg : Registration between src volume and subject's anatomical (ie, a register.dat). This is only needed when using a label.
+<br/>
 --finalmskvol : Save the final set of voxels selected for the ROI in this volume.
+<br/>
 --roiavg : Save output as a bfloat 'volume'. This flag is actually necessary even if you are not going to use this output.
 
 <br/>
