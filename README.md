@@ -278,17 +278,23 @@ fieldsign-sess -a retinotopy.lh -sphere -s David
 **Visualize the results**
 
 + **Display field sign:**
-<br/>
 
 ```
 tksurfer-sess -a retinotopy.lh -s David -fieldsign -tksurfer
 ```
+
++ **Patch**
 <br/>
 
 ![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/fsign.png)
 
 
++ **Whole (sphere)**
+<br/>
 
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/sphere.png)
+
+<br/>
 
 **Now you need to create a mask over the regions of interest**
 
