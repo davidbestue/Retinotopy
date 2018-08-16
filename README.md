@@ -125,9 +125,13 @@ From the retinotopy directory run the preprocessing
 
 ```
 preproc-sess -s David -fwhm 5 -fsd bold -per-run
-
 ```
 <br/>
+
+***For the encoding and WMtask, we preprocessed the data with SPM. Check this other [repository](https://github.com/davidbestue/Preprocessing-functional-images)***
+
+Some of the data was also preprocessed with freesurfer as it was needed to move the masks of the ROIs to a standard functional space.
+
 
 # Make the analysis
 
@@ -339,12 +343,47 @@ and
 tksurfer-sess -a retinotopy.rh -s David -map angle -tksurfer
 ```
 
+Once you have the image you will mark the region of interest
+
+**1. Press the “Make Closed Path” button.**
+**2. Mark with the cursor points defining the area you want to delimitate.**
+**3. Press the “Make Closed Path” button.** 
+**4. Click with the cursor on a point inside the area.**
+**5. Click on “Custom Fill”.**
+ Then select on:
+    “Fill conditions” - “Up to and including paths”;
+    “Fill From” - “Last clicked vertex”
+    “Action” - Create new label
+    press “Fill”
+ 
+**5. press File > Label > Save Selected Label**
+    Iput a name, for example “v1rh.label” and click ok.
 
 
-mri_vol2roi --label /home/david/Desktop/freesurfer/David/structurals/struct_1/David/label/IPS_1lh.label --srcvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/template.nii.gz --srcreg /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/register.dof6.dat~ --finalmskvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/maskIPS_1lh_2 --roiavg IPS_1lh.delete.dat
+**Now you need to adapt the mask to the voxel size of the functional image**
+
+We use the [mri_vol2roi](https://surfer.nmr.mgh.harvard.edu/fswiki/mri_vol2roi) function
+
+mri_vol2roi --label ***path***  --scrvol ***path*** --srcreg ***path*** --finalmskvol ***path*** --roiavg ***X.delet.dat**
+
+--label : path to label file
+--scrvol : Bfloat/bshort stem of the volume from which the ROI is to be extracted.
+--srcreg : Registration between src volume and subject's anatomical (ie, a register.dat). This is only needed when using a label.
+--finalmskvol : Save the final set of voxels selected for the ROI in this volume.
+--roiavg : Save output as a bfloat 'volume'. This flag is actually necessary even if you are not going to use this output.
+
+<br/>
+
+Example:
+
+Mask: /home/david/Desktop/freesurfer/David/structurals/struct_1/David/label/v1rh.label
+
+Volume functional image (reference): /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/template.nii.gz
+You get this image when you preprocess a functional image in freesurfer.
 
 ```
-
+mri_vol2roi --label /home/david/Desktop/freesurfer/David/structurals/struct_1/David/label/v1rh.label --srcvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/template.nii.gz --srcreg /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/register.dof6.dat~ --finalmskvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/maskv1rh --roiavg v1rh.delete.dat
+```
 
 
 
