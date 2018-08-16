@@ -366,12 +366,14 @@ Then select on:
 press “Fill”
 
 <br/>
+
 **6. press File > Label > Save Selected Label**
+
 <br/>
     Iput a name, for example “v1rh.label” and click ok.
 
-
 <br/>
+
 **Now you need to adapt the mask to the voxel size of the functional image**
 
 We use the [mri_vol2roi](https://surfer.nmr.mgh.harvard.edu/fswiki/mri_vol2roi) function
