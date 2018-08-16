@@ -56,7 +56,7 @@ Now you need to set the enviroment to link all the analysis you do in freesurfer
 ```
 export SUBJECTS_DIR=/home/david/Desktop/freesurfer/David/structurals/struct_1
 cd $SUBJECTS_DIR
-
+cd /home/david/Desktop/freesurfer/retinotopy
 ```
 
 <br/>
