@@ -174,6 +174,11 @@ tksurfer-sess -a retinotopy.rh -s David -tksurfer
 tksurfer-sess -a retinotopy.lh -s David -tksurfer
 ```
 
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/sign_map.png)
+
+<br/>
+
+
 + **Display raw angle:**
 
 ```
@@ -181,12 +186,20 @@ tksurfer-sess -a retinotopy.rh -s David -map angle -tksurfer
 tksurfer-sess -a retinotopy.lh -s David -map angle -tksurfer
 ```
 
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/raw_angle.png)
+
+<br/>
+
 + **Display angle masked by sig:**
 
 ```
 tksurfer-sess -a retinotopy.rh -s David -map angle.masked -tksurfer
 tksurfer-sess -a retinotopy.lh -s David -map angle.masked -tksurfer
 ```
+
+![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/angle_masked.png)
+
+<br/>
 
 <br/>
 
