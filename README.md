@@ -268,6 +268,11 @@ Now you can run the field sign
 ```
 fieldsign-sess -a retinotopy.lh -patch lh.occip.patch.flat -s David
 fieldsign-sess -a retinotopy.rh -patch rh.occip.patch.flat -s David
+
+If you want the whole brian you can run this:
+
+fieldsign-sess -a retinotopy.rh -sphere -s David
+fieldsign-sess -a retinotopy.lh -sphere -s David
 ```
 
 **Visualize the results**
@@ -299,14 +304,26 @@ Follow the pdf attached **instructions_creating_mask.pdf**
 Options:
 
 cd /home/david/Desktop/freesurfer/retinotopy/David/bold/retinotopy.rh
+
+The rtopy.par with polar to get the anges:
 rtview --s David --rh --polar --real polar/real.nii.gz --imag polar/imag.nii.gz --fsig polar/fsig.nii.gz
+
+The rtopy.par with eccen to get the radial:
 rtview --s David --rh --eccen --real eccen/real.nii.gz --imag eccen/imag.nii.gz --fsig eccen/fsig.nii.gz
 
 
 cd /home/david/Desktop/freesurfer/retinotopy
+
+All together for significance
 tksurfer-sess -a retinotopy.rh -s David -tksurfer
+
+All together for angle
 tksurfer-sess -a retinotopy.rh -s David -map angle -tksurfer
+
+All together for angle masked by significance
 tksurfer-sess -a retinotopy.rh -s David -map angle.masked -tksurfer
+
+All together to make the significance map
 tksurfer-sess -a retinotopy.lh -s David -fieldsign -tksurfer
 
 
