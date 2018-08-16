@@ -287,19 +287,40 @@ tksurfer-sess -a retinotopy.lh -s David -fieldsign -tksurfer
 
 **Now you need to create a mask over the regions of interest**
 
+
 # Make a mask
 <br/>
 
 Follow the pdf attached **instructions_creating_mask.pdf**
 
+**Depending from what image you want the mask**
+
+```
+Options:
+
+cd /home/david/Desktop/freesurfer/retinotopy/David/bold/retinotopy.rh
+rtview --s David --rh --polar --real polar/real.nii.gz --imag polar/imag.nii.gz --fsig polar/fsig.nii.gz
+rtview --s David --rh --eccen --real eccen/real.nii.gz --imag eccen/imag.nii.gz --fsig eccen/fsig.nii.gz
 
 
-´´´
+cd /home/david/Desktop/freesurfer/retinotopy
+tksurfer-sess -a retinotopy.rh -s David -tksurfer
+tksurfer-sess -a retinotopy.rh -s David -map angle -tksurfer
+tksurfer-sess -a retinotopy.rh -s David -map angle.masked -tksurfer
+tksurfer-sess -a retinotopy.lh -s David -fieldsign -tksurfer
+
+
+There is a equivalence between:
+rtview --s David --rh --polar --real polar/real.nii.gz --imag polar/imag.nii.gz --fsig polar/fsig.nii.gz
+and
+tksurfer-sess -a retinotopy.rh -s David -map angle -tksurfer
+```
+
+
+
 mri_vol2roi --label /home/david/Desktop/freesurfer/David/structurals/struct_1/David/label/IPS_1lh.label --srcvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/template.nii.gz --srcreg /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/register.dof6.dat~ --finalmskvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/maskIPS_1lh_2 --roiavg IPS_1lh.delete.dat
 
-
-´´´
-
+```
 
 
 
