@@ -237,6 +237,7 @@ Choose a 4th point to specify which portion of surface to keep and press button 
 Once it is cut
 
 <br/>
+
 ![](https://github.com/davidbestue/Retinotopy/blob/master/imgs/cut.png)
 
 <br/>
