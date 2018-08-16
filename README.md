@@ -354,12 +354,16 @@ Once you have the image you will mark the region of interest
 **4. Click with the cursor on a point inside the area.**
 <br/>
 **5. Click on “Custom Fill”.**
- <br/>
- Then select on:
-    “Fill conditions” - “Up to and including paths”;
-    “Fill From” - “Last clicked vertex”
-    “Action” - Create new label
-    press “Fill”
+<br/>
+Then select on:
+<br/>
+“Fill conditions” - “Up to and including paths”;
+<br/>
+“Fill From” - “Last clicked vertex”
+<br/>
+"Action” - Create new label
+<br/>
+press “Fill”
 
 <br/>
 **6. press File > Label > Save Selected Label**
