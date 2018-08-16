@@ -364,7 +364,7 @@ Once you have the image you will mark the region of interest
 
 We use the [mri_vol2roi](https://surfer.nmr.mgh.harvard.edu/fswiki/mri_vol2roi) function
 
-mri_vol2roi --label ***path***  --scrvol ***path*** --srcreg ***path*** --finalmskvol ***path*** --roiavg ***X.delet.dat**
+mri_vol2roi --label ***path***  --scrvol ***path*** --srcreg ***path*** --finalmskvol ***path*** --roiavg ***X.delet.dat***
 
 --label : path to label file
 --scrvol : Bfloat/bshort stem of the volume from which the ROI is to be extracted.
