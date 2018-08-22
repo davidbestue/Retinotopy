@@ -375,11 +375,11 @@ press “Fill”
 
 We use the [mri_vol2roi](https://surfer.nmr.mgh.harvard.edu/fswiki/mri_vol2roi) function
 
-mri_vol2roi --label ***path***  --scrvol ***path*** --srcreg ***path*** --finalmskvol ***path*** --roiavg ***X.delet.dat***
+mri_vol2roi --label ***path***  --srcvol ***path*** --srcreg ***path*** --finalmskvol ***path*** --roiavg ***X.delet.dat***
 
 --label : path to label file
 <br/>
---scrvol : Bfloat/bshort stem of the volume from which the ROI is to be extracted.
+--srcvol : Bfloat/bshort stem of the volume from which the ROI is to be extracted.
 <br/>
 --srcreg : Registration between src volume and subject's anatomical (ie, a register.dat). This is only needed when using a label.
 <br/>
