@@ -401,6 +401,8 @@ Mask: /home/david/Desktop/freesurfer/David/structurals/struct_1/David/label/v1rh
 Volume functional image (reference): /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/template.nii.gz
 You get this image when you preprocess a functional image in freesurfer.
 
+¡¡¡The template you use here is the same as the one you use in the LAST step od the Preprocessing function with SPM!!!
+
 ```
 mri_vol2roi --label /home/david/Desktop/freesurfer/David/structurals/struct_1/David/label/v1rh.label --srcvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/template.nii.gz --srcreg /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/register.dof6.dat~ --finalmskvol /home/david/Desktop/freesurfer/David/encoding/encoding_1/bold/001/maskv1rh --roiavg v1rh.delete.dat
 ```
