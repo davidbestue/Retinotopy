@@ -58,7 +58,7 @@ export SUBJECTS_DIR=/home/david/Desktop/freesurfer/David/structurals/struct_1
 cd $SUBJECTS_DIR
 cd /home/david/Desktop/freesurfer/retinotopy
 
-export SUBJECTS_DIR= /mnt/c/Users/David/Desktop/KI_Desktop/freesurfer/r001/structurals/struct_1
+export SUBJECTS_DIR=/mnt/c/Users/David/Desktop/KI_Desktop/freesurfer/r001/structurals/struct_1
 cd $SUBJECTS_DIR
 cd /mnt/c/Users/David/Desktop/KI_Desktop/freesurfer/r001/retinotopy
 
